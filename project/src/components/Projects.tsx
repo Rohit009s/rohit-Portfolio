@@ -67,6 +67,27 @@ const Projects = () => {
       github: "https://github.com/Rohit009s/Online-Code-Editor"
     },
     {
+      title: "Brain Flip Challenge Memory Game",
+      description: "An engaging memory challenge game built with React that tests and enhances cognitive abilities through card-matching mechanics. Features smooth animations, score tracking, and progressive difficulty levels to keep players engaged and challenged.",
+      image: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&q=80&w=2070",
+      tech: ["React.js", "HTML5", "CSS3", "JavaScript", "Vercel"],
+      features: [
+        "Interactive card flipping",
+        "Score tracking system",
+        "Progressive difficulty",
+        "Responsive design",
+        "Smooth animations"
+      ],
+      metrics: [
+        "100% responsive",
+        "Fast load times",
+        "Optimized performance",
+        "Cross-browser compatible"
+      ],
+      liveUrl: "https://brain-flip-rohit.vercel.app/",
+      github: "https://github.com/Rohit009s/Brain-Flip-Game"
+    },
+    {
       title: "Drone-based Surveillance System",
       description: "Advanced drone system for disaster management and surveillance operations, integrating LiDAR and thermal imaging for enhanced detection capabilities. Optimized for search and rescue operations.",
       image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=2070",
