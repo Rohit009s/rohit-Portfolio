@@ -21,7 +21,7 @@ const Hero = () => {
       if (!isDeleting) {
         setCurrentRole(role.substring(0, currentRole.length + 1));
         if (currentRole === role) {
-          setTimeout(() => setIsDeleting(true), 2000);
+          setTimeout(() => setIsDeleting(true), 1000); // Faster pause
         }
       } else {
         setCurrentRole(role.substring(0, currentRole.length - 1));
@@ -30,7 +30,7 @@ const Hero = () => {
           setCurrentIndex(currentIndex + 1);
         }
       }
-    }, isDeleting ? 100 : 200);
+    }, isDeleting ? 50 : 100); // Faster typing/deleting
 
     return () => clearTimeout(timeout);
   }, [currentRole, currentIndex, isDeleting]);
