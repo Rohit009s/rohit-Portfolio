@@ -31,11 +31,10 @@ const Hero = () => {
               options={{
                 strings: [
                   'Software Developer',
-                  'Project Manager',
                   'Embedded System Engineer',
-                  'Innovator',
+                  'AI Engineer',
                   'Leader',
-                  'MERN-Stack Developer'
+                  'Creavtive thinker'
                 ],
                 autoStart: true,
                 loop: true,
