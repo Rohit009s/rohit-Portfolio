@@ -1,7 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+const roles = [
+  'Software Developer',
+  'Embedded System Engineer',
+  'AI Engineer',
+  'Leader',
+  'Creative Thinker'
+];
+
 const Hero = () => {
+
+  const [currentRole, setCurrentRole] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const role = roles[currentIndex % roles.length];
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setCurrentRole(role.substring(0, currentRole.length + 1));
+        if (currentRole === role) {
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        setCurrentRole(role.substring(0, currentRole.length - 1));
+        if (currentRole === '') {
+          setIsDeleting(false);
+          setCurrentIndex(currentIndex + 1);
+        }
+      }
+    }, isDeleting ? 100 : 200);
+
+    return () => clearTimeout(timeout);
+  }, [currentRole, currentIndex, isDeleting]);
+
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6">
       <motion.div
@@ -20,7 +53,16 @@ const Hero = () => {
           <span className="gradient-text">Rohit Neelam</span>
         </motion.h1>
         <div className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8">
-          Enthusiastic in Software Developer
+          Enthusiastic in
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="gradient-text ml-2"
+          >
+            {currentRole}
+            <span className="animate-pulse">|</span>
+          </motion.span>
         </div>
 
         <motion.p
