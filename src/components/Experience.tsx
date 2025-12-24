@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Award, Users, Star, Mic, Code, Crown, MessageSquare } from 'lucide-react';
+import { Trophy, Users, Star, Mic, Code, Crown, MessageSquare } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
@@ -135,7 +135,7 @@ const Experience = () => {
           <div className="relative">
             <div className="absolute left-8 top-0 bottom-0 w-px bg-gray-700" />
             
-            {experiences.map((exp, index) => (
+            {experiences.map((exp) => (
               <motion.div
                 key={exp.title}
                 className="relative pl-20 pb-12"

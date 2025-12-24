@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Server, Cpu, Cloud, Database, Brain } from 'lucide-react';
+import { Code, Cpu, Cloud, Database, Brain } from 'lucide-react';
 
 const About = () => {
   const skills = [

@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import Hero from './components/Hero';
 import About from './components/About';

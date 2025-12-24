@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import TypewriterEffect from 'typewriter-effect';
 
 const Hero = () => {
   return (
@@ -21,26 +20,7 @@ const Hero = () => {
           <span className="gradient-text">Rohit Neelam</span>
         </motion.h1>
         <div className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8">
-          Enthusiastic in
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            <TypewriterEffect
-              options={{
-                strings: [
-                  'Software Developer',
-                  'Embedded System Engineer',
-                  'AI Engineer',
-                  'Leader',
-                  'Creavtive thinker'
-                ],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </motion.div>
+          Enthusiastic in Software Developer
         </div>
 
         <motion.p
