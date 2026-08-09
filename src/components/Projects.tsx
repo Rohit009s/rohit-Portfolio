@@ -4,6 +4,8 @@ import { Github, ExternalLink, Database, Shield } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
+    
+    
     {
       title: "Prism - College Food Ordering Platform",
       description: "A comprehensive MERN stack food ordering system for CVR College canteen that reduces wait times by 60% and enables digital payments via Stripe. Features interactive menu grid, real-time order tracking, and streamlined checkout process.",
@@ -24,6 +26,27 @@ const Projects = () => {
       ],
       liveUrl: "https://prism-canteen-cvr-rohit.vercel.app/",
       github: "https://github.com/Rohit009s/Prism-Food-CVR.git"
+    },
+    {
+      title: "Split-wise",
+      description: "A modern expense-splitting web app for shared trips, group bills, and day-to-day household costs. It makes it easy to create groups, track who paid what, and settle balances transparently.",
+      image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&q=80&w=2070",
+      tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "Vercel"],
+      features: [
+        "Group expense tracking",
+        "Shared bill splitting",
+        "Balance settlement view",
+        "Responsive dashboard",
+        "Real-time updates"
+      ],
+      metrics: [
+        "Simple group management",
+        "Clear expense visibility",
+        "Fast and responsive UI",
+        "Modern web experience"
+      ],
+      liveUrl: "https://split-wise-olive.vercel.app/",
+      github: "https://github.com/Rohit009s/Split-wise"
     },
     {
       title: "Smart Parking System",
@@ -65,6 +88,27 @@ const Projects = () => {
       ],
       liveUrl: "https://online-code-editorr-rohit.vercel.app/",
       github: "https://github.com/Rohit009s/Online-Code-Editor"
+    },
+    {
+      title: "url-shortener-aws",
+      description: "A URL shortening service built with an AWS-based backend architecture, focused on fast redirects, short-link generation, and scalable deployment for modern web applications.",
+      image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=2070",
+      tech: ["Next.js", "AWS", "Lambda", "DynamoDB", "API Gateway", "CloudFront"],
+      features: [
+        "Short URL creation",
+        "Fast redirect handling",
+        "Scalable serverless backend",
+        "Clean and simple UI",
+        "Deployment-ready architecture"
+      ],
+      metrics: [
+        "Scalable cloud design",
+        "Efficient link redirection",
+        "Modern deployment flow",
+        "Production-ready setup"
+      ],
+      liveUrl: "https://learn.nextwork.org/projects/59510f85-9598-4f81-b98b-ab8d0a4c0b3c",
+      github: "https://github.com/Rohit009s/url-shortener-aws"
     },
     {
       title: "Brain Flip Challenge Memory Game",

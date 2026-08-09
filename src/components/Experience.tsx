@@ -1,30 +1,40 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Users, Star, Mic, Code, Crown, MessageSquare } from 'lucide-react';
+import { Trophy, Users, Star, Mic, Code, Crown, MessageSquare, Briefcase } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
-     {
-      title: "HP Dreams-unlocked",
-      role: "President & Head Coordinator",
-      date: "Runner-up",
-      description: "Participated in the national-level HP Hackathon held at Mehboob Studio, Mumbai, and secured the Runner-Up position among top innovators.Rewarded with an HP OmniBook X14 Flip Gen AI (worth ₹1.5L) for pitching a creative idea in the Filmmaking & AI category, guided by industry mentors from HP and Bollywood.",
-      icon: <Crown className="w-6 h-6 text-primary" />
+    {
+      title: "Infosys",
+      role: "Software Development Engineer",
+      date: "2025 - Present",
+      description: "Currently working at Infosys, contributing to professional growth, technical learning, and project responsibilities in a dynamic software development environment.",
+      icon: <Briefcase className="w-6 h-6 text-primary" />
     },
     
     {
-      title: "SoulStepperz Dance Club",
-      role: "President & Head Coordinator",
-      date: "2024-2025",
-      description: "Led CVR College's premier dance club, organizing performances and fostering community engagement. Successfully managed team dynamics and club growth.",
-      icon: <Crown className="w-6 h-6 text-primary" />
+      title: "Holpin",
+      role: "Internship",
+      date: "2025 • 3 months",
+      description: "Completed a three-month internship at Holpin, building practical experience in fast-paced project execution and professional teamwork.",
+      icon: <Code className="w-6 h-6 text-primary" />
     },
     {
-      title: "Personal Tutor ",
-      role: "Private Tutor for School Students ",
-      date: "2022 - 2025",
-      description: "Personal tutor for 6th-class to 12th-class students, including EAMCET and JEE Mains coaching",
-      icon: <Mic className="w-6 h-6 text-primary" />
+      title: "eBox",
+      role: "Internship",
+      date: "2024 • 6 months",
+      description: "Completed a six-month internship at eBox, gaining hands-on experience in development workflows, collaboration, and real-world problem-solving.",
+      icon: <Code className="w-6 h-6 text-primary" />
+    },
+  ];
+
+  const achievements = [
+    {
+      title: "HP Dreams-unlocked",
+      role: "President & Head Coordinator",
+      date: "Runner-up",
+      description: "Participated in the national-level HP Hackathon held at Mehboob Studio, Mumbai, and secured the Runner-Up position among top innovators. Rewarded with an HP OmniBook X14 Flip Gen AI (worth ₹1.5L) for pitching a creative idea in the Filmmaking & AI category, guided by industry mentors from HP and Bollywood.",
+      icon: <Crown className="w-6 h-6 text-primary" />
     },
     {
       title: "National-Level Hackathon on AI & IoT",
@@ -86,7 +96,7 @@ const Experience = () => {
 
   const sectionVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
       transition: {
         when: "beforeChildren",
@@ -105,8 +115,8 @@ const Experience = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, x: -20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       x: 0,
       transition: { duration: 0.5 }
     },
@@ -116,6 +126,39 @@ const Experience = () => {
       transition: { duration: 0.3 }
     }
   };
+
+  const renderTimeline = (items: Array<{ title: string; role: string; date: string; description: string; icon: React.ReactNode }>, heading: string) => (
+    <div className="mb-12">
+      <h3 className="text-2xl font-semibold mb-8 text-center sm:text-left">{heading}</h3>
+      <div className="max-w-4xl mx-auto">
+        <div className="relative">
+          <div className="absolute left-8 top-0 bottom-0 w-px bg-gray-700" />
+
+          {items.map((item) => (
+            <motion.div
+              key={item.title}
+              className="relative pl-20 pb-12"
+              variants={itemVariants}
+            >
+              <div className="absolute left-0 p-4 glass-card rounded-full">
+                {item.icon}
+              </div>
+              <div className="glass-card p-6">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
+                  <div>
+                    <h4 className="text-xl font-semibold">{item.title}</h4>
+                    <p className="text-primary">{item.role}</p>
+                  </div>
+                  <span className="text-gray-400 text-sm">{item.date}</span>
+                </div>
+                <p className="text-gray-300">{item.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <section id="experience" className="py-20">
@@ -131,32 +174,9 @@ const Experience = () => {
           Experience & <span className="gradient-text">Achievements</span>
         </h2>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-px bg-gray-700" />
-            
-            {experiences.map((exp) => (
-              <motion.div
-                key={exp.title}
-                className="relative pl-20 pb-12"
-                variants={itemVariants}
-              >
-                <div className="absolute left-0 p-4 glass-card rounded-full">
-                  {exp.icon}
-                </div>
-                <div className="glass-card p-6">
-                  <div className="flex justify-between items-start mb-2">
-                    <div>
-                      <h3 className="text-xl font-semibold">{exp.title}</h3>
-                      <p className="text-primary">{exp.role}</p>
-                    </div>
-                    <span className="text-gray-400">{exp.date}</span>
-                  </div>
-                  <p className="text-gray-300">{exp.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+        <div className="max-w-6xl mx-auto">
+          {renderTimeline(experiences, "Experience")}
+          {renderTimeline(achievements, "Achievements")}
         </div>
       </motion.div>
     </section>
