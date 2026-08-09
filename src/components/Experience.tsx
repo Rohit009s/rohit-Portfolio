@@ -31,8 +31,8 @@ const Experience = () => {
   const achievements = [
     {
       title: "HP Dreams-unlocked",
-      role: "President & Head Coordinator",
-      date: "Runner-up",
+      role:"Runner-up",
+      date: "2025",
       description: "Participated in the national-level HP Hackathon held at Mehboob Studio, Mumbai, and secured the Runner-Up position among top innovators. Rewarded with an HP OmniBook X14 Flip Gen AI (worth ₹1.5L) for pitching a creative idea in the Filmmaking & AI category, guided by industry mentors from HP and Bollywood.",
       icon: <Crown className="w-6 h-6 text-primary" />
     },
